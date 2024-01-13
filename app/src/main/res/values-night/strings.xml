@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Beleske</string>
+    <string name="add_note">Dodaj Belesku</string>
+    <string name="update_note">Update Belesku</string>
+    <string name="title">Naslov</string>
+    <string name="notes">Beleske</string>
+    <string name="priority">Prioritet</string>
+    <string name="date">Datum</string>
+    <string name="nav_delete">Delete</string>
+    <string name="nav_search">Search</string>
+    <string name="del_text">Da li hocete da izbrisete ovu Belesku?</string>
+    <string name="project_start">26 Dec 2023</string>
+    <string name="donot_del">Ne</string>
+    <string name="yes_del">Da</string>
+</resources>
