@@ -9,7 +9,7 @@
         android:layout_width="100dp"
         android:layout_height="7dp"
         android:layout_margin="10dp"
-        android:background="@drawable/del_indicator_shape"/>
+        android:background="@drawable/del_indic_shape"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
 
     <TextView
         android:id="@+id/delNoBtn"
-        android:background="@drawable/donot_del_btn"
+        android:background="@drawable/dont_del_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

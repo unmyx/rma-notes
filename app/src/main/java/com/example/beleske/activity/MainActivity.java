@@ -44,21 +44,21 @@ public class MainActivity extends AppCompatActivity {
         nofilter.setOnClickListener(v -> {
             loadData(0);
             nofilter.setBackgroundResource(R.drawable.filter_selected_shape);
-            hightolow.setBackgroundResource(R.drawable.filter_un_shape);
-            lowtohigh.setBackgroundResource(R.drawable.filter_un_shape);
+            hightolow.setBackgroundResource(R.drawable.filter_shape);
+            lowtohigh.setBackgroundResource(R.drawable.filter_shape);
         });
 
         hightolow.setOnClickListener(v -> {
             loadData(1);
-            nofilter.setBackgroundResource(R.drawable.filter_un_shape);
+            nofilter.setBackgroundResource(R.drawable.filter_shape);
             hightolow.setBackgroundResource(R.drawable.filter_selected_shape);
-            lowtohigh.setBackgroundResource(R.drawable.filter_un_shape);
+            lowtohigh.setBackgroundResource(R.drawable.filter_shape);
         });
 
         lowtohigh.setOnClickListener(v -> {
             loadData(2);
-            nofilter.setBackgroundResource(R.drawable.filter_un_shape);
-            hightolow.setBackgroundResource(R.drawable.filter_un_shape);
+            nofilter.setBackgroundResource(R.drawable.filter_shape);
+            hightolow.setBackgroundResource(R.drawable.filter_shape);
             lowtohigh.setBackgroundResource(R.drawable.filter_selected_shape);
         });
 
