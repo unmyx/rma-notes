@@ -67,7 +67,7 @@ public class AddNotesActivity extends AppCompatActivity {
         NotesModel notes1 = new NotesModel();
         notes1.notesTitle = title;
         if (notes1.notesTitle.equals("")){
-            notes1.notesTitle = "Untitled";
+            notes1.notesTitle = "Bez Naslova";
         }
         notes1.notes = notes;
         notes1.notesPriority = priority;
