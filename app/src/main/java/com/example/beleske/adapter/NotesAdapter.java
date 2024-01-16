@@ -1,5 +1,6 @@
 package com.example.beleske.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
         allNotesItem = new ArrayList<>(notesModels);
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void searchNotes(List<NotesModel> filterredName){
         this.notesModels = filterredName;
         notifyDataSetChanged();

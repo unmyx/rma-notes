@@ -56,11 +56,11 @@ public class AddNotesActivity extends AppCompatActivity {
             title = binding.notesTitle.getText().toString();
             notes = binding.notesData.getText().toString();
 
-            CreateNotes("Nova Belezka Napravljena!",title, notes);
+            CreateNotes(title, notes);
         });
     }
 
-    private void CreateNotes(String toastMessage, String title, String notes) {
+    private void CreateNotes(String title, String notes) {
         Date date = new Date();
         CharSequence sequence = DateFormat.format("MMMM d, yyyy", date.getTime());
 
@@ -75,8 +75,8 @@ public class AddNotesActivity extends AppCompatActivity {
 
         notesViewModel.insertNotes(notes1);
 
-        if (!Objects.equals(toastMessage, "")) {
-            Toast toast = Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT);
+        if (!Objects.equals("Nova Belezka Napravljena!", "")) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Nova Belezka Napravljena!", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
             toast.show();
             finish();

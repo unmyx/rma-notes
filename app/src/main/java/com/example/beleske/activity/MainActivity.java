@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         MenuItem menuItem = menu.findItem(R.id.navigation_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
+        assert searchView != null;
         searchView.setQueryHint("Trazi belesku...");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

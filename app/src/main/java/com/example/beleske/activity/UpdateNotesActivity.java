@@ -42,15 +42,19 @@ public class UpdateNotesActivity extends AppCompatActivity {
         binding.upNotesTitle.setText(stitle);
         binding.upNotesData.setText(snotes);
 
-        if(spriority.equals("1")){
-            binding.greenPrior.setImageResource(R.drawable.baseline_done_24);
-            priority = "1";
-        }else if(spriority.equals("2")){
-            binding.yellowPrior.setImageResource(R.drawable.baseline_done_24);
-            priority = "2";
-        }else if(spriority.equals("3")){
-            binding.redPrior.setImageResource(R.drawable.baseline_done_24);
-            priority = "3";
+        switch (spriority) {
+            case "1":
+                binding.greenPrior.setImageResource(R.drawable.baseline_done_24);
+                priority = "1";
+                break;
+            case "2":
+                binding.yellowPrior.setImageResource(R.drawable.baseline_done_24);
+                priority = "2";
+                break;
+            case "3":
+                binding.redPrior.setImageResource(R.drawable.baseline_done_24);
+                priority = "3";
+                break;
         }
 
         notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
@@ -81,11 +85,11 @@ public class UpdateNotesActivity extends AppCompatActivity {
             String title = binding.upNotesTitle.getText().toString();
             String notes = binding.upNotesData.getText().toString();
 
-            UpdateNotes("Beleske su azurirane!", title, notes);
+            UpdateNotes(title, notes);
         });
     }
 
-    private void UpdateNotes(String toastMessage, String title, String notes) {
+    private void UpdateNotes(String title, String notes) {
         Date date = new Date();
         CharSequence sequence = DateFormat.format("MMMM d, yyyy", date.getTime());
 
@@ -101,8 +105,8 @@ public class UpdateNotesActivity extends AppCompatActivity {
 
         notesViewModel.updateNotes(updateNotes);
 
-        if (!Objects.equals(toastMessage, "")) {
-            Toast toast = Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT);
+        if (!Objects.equals("Beleske su azurirane!", "")) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Beleske su azurirane!", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
             toast.show();
             finish();
