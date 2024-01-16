@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         MenuItem menuItem = menu.findItem(R.id.navigation_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint("Trazi...");
+        searchView.setQueryHint("Trazi belesku...");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
