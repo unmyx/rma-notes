@@ -81,7 +81,7 @@ public class UpdateNotesActivity extends AppCompatActivity {
             String title = binding.upNotesTitle.getText().toString();
             String notes = binding.upNotesData.getText().toString();
 
-            UpdateNotes("Notes updated!", title, notes);
+            UpdateNotes("Beleske su azurirane!", title, notes);
         });
     }
 
@@ -93,7 +93,7 @@ public class UpdateNotesActivity extends AppCompatActivity {
         updateNotes.id = iid;
         updateNotes.notesTitle = title;
         if (updateNotes.notesTitle.equals("")){
-            updateNotes.notesTitle = "Untitled";
+            updateNotes.notesTitle = "Bez naslova";
         }
         updateNotes.notes = notes;
         updateNotes.notesPriority = priority;

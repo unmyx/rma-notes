@@ -20,6 +20,8 @@ public class AddNotesActivity extends AppCompatActivity {
     NotesViewModel notesViewModel;
     String priority = "1";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
